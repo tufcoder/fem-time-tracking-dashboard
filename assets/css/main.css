@@ -1,0 +1,66 @@
+:root {
+    /* ### Typography */
+    /* 16px */
+    --font-size: 1rem;
+    /* 18px */
+    --font-size-card-title: 1.125rem;
+    --font-weight-small: 300;
+    --font-weight-regular: 400;
+    --font-weight-medium: 500;
+    --font-family: 'Rubik', sans-serif;
+    /* ### Primary */
+    --blue: hsl(246, 80%, 60%);
+    --lightRedWork: hsl(15, 100%, 70%);
+    --softBluePlay: hsl(195, 74%, 62%);
+    --lightRedStudy: hsl(348, 100%, 68%);
+    --limeGreenExercise: hsl(145, 58%, 55%);
+    --violetSocial: hsl(264, 64%, 52%);
+    --softOrangeSelfCare: hsl(43, 84%, 65%);
+    /* ### Neutral */
+    --veryDarkBlue: hsl(226, 43%, 10%);
+    --darkBlue: hsl(235, 46%, 20%);
+    --desaturatedBlue: hsl(235, 45%, 61%);
+    --paleBlue: hsl(236, 100%, 87%);
+    --linkColor: hsl(228, 45%, 44%);
+}
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-weight: var(--font-weight-regular);
+    font-size: var(--font-size);
+    font-family: var(--font-family);
+    color: var(--paleBlue);
+    background-color: var(--veryDarkBlue);
+}
+
+.attribution {
+    /* 11px */
+    font-size: .6875rem;
+    text-align: center;
+}
+
+.attribution a {
+    text-decoration: none;
+    font-weight: var(--font-weight-medium);
+    /* 14px */
+    font-size: .875rem;
+    color: var(--softBluePlay);
+}
+
+footer {
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
