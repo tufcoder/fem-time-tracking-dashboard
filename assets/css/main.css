@@ -21,8 +21,9 @@
     --darkBlue: hsl(235, 46%, 20%);
     --desaturatedBlue: hsl(235, 45%, 61%);
     --paleBlue: hsl(236, 100%, 87%);
-    --white: #FFF;
+    --white: hsl(0, 0%, 100%);
     --linkColor: hsl(228, 45%, 44%);
+    --hover: #34397b;
 }
 
 html {
@@ -98,6 +99,10 @@ button {
         border-radius: 50%;
     }
 
+    p {
+        font-weight: var(--font-weight-regular);
+    }
+
     h1 {
         /* 24px */
         font-size: 1.5rem;
@@ -113,8 +118,17 @@ button {
     /* 24px */
     margin-block-start: 1.5rem;
 
+    button {
+        color: var(--desaturatedBlue);
+        transition: color .2s ease;
+
+        &:hover {
+            color: var(--paleBlue);
+        }
+    }
+
     button[data-active=true] {
-        color: var(--white);
+        color: var(--paleBlue);
     }
 }
 
