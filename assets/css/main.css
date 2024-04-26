@@ -174,11 +174,11 @@ button {
     margin-block-start: 0.5rem;
     font-weight: var(--font-weight-small);
 
-    #current {
+    .current {
         font-size: 2rem;
     }
 
-    #previous {
+    .previous {
         font-weight: var(--font-weight-regular);
     }
 }

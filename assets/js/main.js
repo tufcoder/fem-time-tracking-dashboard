@@ -13,19 +13,19 @@ const appendItem = (item) => {
                     <img src="assets/images/icon-ellipsis.svg" alt="ellipsis image" width="21" height="5">
                 </h2>
 
-                <div id="daily" class="timeframe hidden">
-                    <span id="current"><span>${item.timeframes.daily.current}</span>hrs</span>
-                    <span id="previous">Last Day - <span>${item.timeframes.daily.previous}</span>hrs</span>
+                <div id="daily-${sectionClassType}" class="timeframe hidden">
+                    <span class="current"><span>${item.timeframes.daily.current}</span>hrs</span>
+                    <span class="previous">Last Day - <span>${item.timeframes.daily.previous}</span>hrs</span>
                 </div>
 
-                <div id="weekly" class="timeframe hidden">
-                    <span id="current"><span>${item.timeframes.weekly.current}</span>hrs</span>
-                    <span id="previous">Last Week - <span>${item.timeframes.weekly.previous}</span>hrs</span>
+                <div id="weekly-${sectionClassType}" class="timeframe hidden">
+                    <span class="current"><span>${item.timeframes.weekly.current}</span>hrs</span>
+                    <span class="previous">Last Week - <span>${item.timeframes.weekly.previous}</span>hrs</span>
                 </div>
 
-                <div id="montly" class="timeframe hidden">
-                    <span id="current"><span>${item.timeframes.monthly.current}</span>hrs</span>
-                    <span id="previous">Last Month - <span>${item.timeframes.monthly.previous}</span>hrs</span>
+                <div id="montly-${sectionClassType}" class="timeframe hidden">
+                    <span class="current"><span>${item.timeframes.monthly.current}</span>hrs</span>
+                    <span class="previous">Last Month - <span>${item.timeframes.monthly.previous}</span>hrs</span>
                 </div>
             </div>
         </section>
@@ -36,7 +36,7 @@ const toggleTimeframes = (buttonType) => {
     const timeframes = document.querySelectorAll('.timeframe')
 
     timeframes.forEach(timeframe => {
-        if (timeframe.id !== buttonType)
+        if (!timeframe.id.includes(buttonType))
             timeframe.classList.add('hidden')
         else
             timeframe.classList.remove('hidden')

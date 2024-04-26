@@ -85,11 +85,11 @@
         gap: .5rem;
         margin-block-start: 2rem;
 
-        #current {
+        .current {
             font-size: 3.5rem;
         }
 
-        #previous {
+        .previous {
             font-size: .95rem;
         }
     }
