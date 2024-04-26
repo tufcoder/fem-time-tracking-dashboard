@@ -51,14 +51,17 @@
         margin-block-start: 0;
         /* 28px */
         padding: 1.75rem;
+        /* based .header-title height */
         height: calc(100% - 69%);
     }
 
+    /* a grid inside a grid. My mind: woooowwww... */
     .timeframes-container {
         grid-column: 2 / 3;
         grid-row: 1 / 3;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
+        /* 32px */
         gap: 2rem;
     }
 
@@ -82,14 +85,18 @@
     .timeframe {
         flex-direction: column;
         align-items: flex-start;
-        gap: .5rem;
+        /* 8px */
+        gap: 0.5rem;
+        /* 32px */
         margin-block-start: 2rem;
 
         .current {
+            /* 56px */
             font-size: 3.5rem;
         }
 
         .previous {
+            /* 15.2px */
             font-size: .95rem;
         }
     }
